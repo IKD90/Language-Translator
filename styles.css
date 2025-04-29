@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+h1 i {
+    margin-right: 10px;
+    color: #6e8efb;
+}
+
+.translator-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-box label {
+    font-weight: 600;
+    color: #555;
+}
+
+.lang-box select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.lang-box select:focus {
+    border-color: #6e8efb;
+}
+
+.lang-box button {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lang-box button:hover {
+    background: #5a7df4;
+}
+
+#swapLangs {
+    background: #a777e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#swapLangs:hover {
+    transform: rotate(180deg);
+}
+
+.text-boxes {
+    display: flex;
+    gap: 20px;
+}
+
+.text-boxes textarea {
+    flex: 1;
+    height: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.text-boxes textarea:focus {
+    border-color: #6e8efb;
+}
+
+#translatedText {
+    background: #f9f9f9;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#translateBtn {
+    background: #6e8efb;
+    color: white;
+}
+
+#translateBtn:hover {
+    background: #5a7df4;
+}
+
+#copyText {
+    background: #4CAF50;
+    color: white;
+}
+
+#copyText:hover {
+    background: #45a049;
+}
+
+#clearText {
+    background: #f44336;
+    color: white;
+}
+
+#clearText:hover {
+    background: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-boxes {
+        flex-direction: column;
+    }
+    
+    .language-selector {
+        flex-direction: column;
+    }
+    
+    .lang-box {
+        width: 100%;
+    }
+}

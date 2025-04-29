@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Language Translator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-language"></i> Universal Translator</h1>
+        
+        <div class="translator-box">
+            <div class="language-selector">
+                <div class="lang-box">
+                    <label>From:</label>
+                    <select id="sourceLang">
+                        <option value="auto">Auto Detect</option>
+                    </select>
+                    <button id="voiceInput"><i class="fas fa-microphone"></i></button>
+                </div>
+                <button id="swapLangs"><i class="fas fa-exchange-alt"></i></button>
+                <div class="lang-box">
+                    <label>To:</label>
+                    <select id="targetLang"></select>
+                    <button id="speakOutput"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+
+            <div class="text-boxes">
+                <textarea id="sourceText" placeholder="Enter text or speak..."></textarea>
+                <textarea id="translatedText" placeholder="Translation" readonly></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="copyText"><i class="far fa-copy"></i> Copy</button>
+                <button id="clearText"><i class="fas fa-eraser"></i> Clear</button>
+                <button id="translateBtn"><i class="fas fa-exchange-alt"></i> Translate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
